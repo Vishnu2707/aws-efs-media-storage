@@ -16,7 +16,7 @@ AWS EFS was chosen to meet these requirements due to its elasticity, high availa
 ## 🏗️ Solution Overview
 
 ### 1. Launching EC2 Instances in Multiple AZs
-We created two EC2 instances in different AZs for high availability and redundancy.
+I created two EC2 instances in different AZs for high availability and redundancy.
 
 #### Steps:
 1. **Create a Security Group** for secure communication:

@@ -15,7 +15,7 @@ AWS EFS was chosen to meet these requirements due to its elasticity, high availa
 
 ## 🏗️ Solution Overview
 
-%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22endArrow%3Dclassic%3Bhtml%3D1%3Brounded%3D0%3BexitX%3D0.5%3BexitY%3D1%3BexitDx%3D0%3BexitDy%3D0%3BentryX%3D0%3BentryY%3D0.72%3BentryDx%3D0%3BentryDy%3D0%3BentryPerimeter%3D0%3B%22%20edge%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20width%3D%2250%22%20height%3D%2250%22%20relative%3D%221%22%20as%3D%22geometry%22%3E%3CmxPoint%20x%3D%22315%22%20y%3D%22360%22%20as%3D%22sourcePoint%22%2F%3E%3CmxPoint%20x%3D%22420%22%20y%3D%22455%22%20as%3D%22targetPoint%22%2F%3E%3C%2FmxGeometry%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E
+<img width="789" alt="Screenshot 2025-01-24 at 8 52 09 PM" src="https://github.com/user-attachments/assets/d42e5212-f155-4e54-997b-cf5a18f60c6b" />
 
 ### 1. Launching EC2 Instances in Multiple AZs
 I created two EC2 instances in different AZs for high availability and redundancy.

@@ -28,10 +28,11 @@ I created two EC2 instances in different AZs for high availability and redundanc
 2. **Launch EC2 Instances** in different AZs:
     ```bash
     # Instance in us-east-1a
-    aws ec2 run-instances --image-id <copy-ami-imageid> --instance-type t2.micro --placement AvailabilityZone=us-east-1a --security-group-ids <copy-sg-id>
+    aws ec2 run-instances --image-id <copy-ami-imageid> --instance-type t2.micro --placement AvailabilityZone=eu-west-2a --security-group-ids <copy-sg-id>
 
     # Instance in us-east-1b
-    aws ec2 run-instances --image-id <copy-ami-imageid> --instance-type t2.micro --placement AvailabilityZone=us-east-1b --security-group-ids <copy-sg-id>    ```
+    aws ec2 run-instances --image-id <copy-ami-imageid> --instance-type t2.micro --placement AvailabilityZone=eu-west-2b --security-group-ids <copy-sg-id>
+    ```
 
 ---
 

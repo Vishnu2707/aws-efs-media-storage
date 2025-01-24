@@ -28,11 +28,10 @@ I created two EC2 instances in different AZs for high availability and redundanc
 2. **Launch EC2 Instances** in different AZs:
     ```bash
     # Instance in us-east-1a
-    aws ec2 run-instances --image-id ami-0866a3c8686eaeeba --instance-type t2.micro --placement AvailabilityZone=us-east-1a --security-group-ids sg-00055e6ae2bc876ce
+    aws ec2 run-instances --image-id <copy-ami-imageid> --instance-type t2.micro --placement AvailabilityZone=us-east-1a --security-group-ids <copy-sg-id>
 
     # Instance in us-east-1b
-    aws ec2 run-instances --image-id ami-0866a3c8686eaeeba --instance-type t2.micro --placement AvailabilityZone=us-east-1b --security-group-ids sg-00055e6ae2bc876ce
-    ```
+    aws ec2 run-instances --image-id <copy-ami-imageid> --instance-type t2.micro --placement AvailabilityZone=us-east-1b --security-group-ids <copy-sg-id>    ```
 
 ---
 
@@ -43,7 +42,7 @@ The **AWS EFS** was set up to allow shared access between the EC2 instances.
 1. **Create the EFS** using the AWS console.
 2. **Configure NFS Rule**:
     ```bash
-    aws ec2 authorize-security-group-ingress --group-id sg-00055e6ae2bc876ce --protocol tcp --port 2049 --source-group sg-00055e6ae2bc876ce
+    aws ec2 authorize-security-group-ingress --group-id <copy-sg-id> --protocol tcp --port 2049 --source-group <copy-sg-id>
     ```
 
 3. **Mount the EFS** on both EC2 instances:
@@ -55,7 +54,7 @@ The **AWS EFS** was set up to allow shared access between the EC2 instances.
     mkdir ~/efs-mount-point
 
     # Mount the EFS
-    sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport your.efs.us-east-1.amazonaws.com:/ ~/efs-mount-point
+    sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport <copy-dns-id-efs>:/ ~/efs-mount-point
     ```
 
 ---
